@@ -248,7 +248,7 @@ img {
   display: flex;
   gap: var(--main-small-space);
 }
-.team-block + .item {
+.team-block {
   background-color: var(--primary-bg-color);
 }
 .team-content {
