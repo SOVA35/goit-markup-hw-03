@@ -38,7 +38,6 @@ body {
 
 .list {
   list-style: none;
-  display: inline-block;
 }
 
 .title {
@@ -60,7 +59,8 @@ p {
   width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
-  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
 }
 img {
   display: block;
@@ -70,8 +70,11 @@ img {
 
 /*---header----*/
 .page-hader {
-  height: 72px;
+  padding: var(--main-small-space);
   border-bottom: 1px solid var(--button-border-color);
+}
+.header-section {
+  display: flex;
 }
 
 /*-------------block nav-----------*/
@@ -96,14 +99,11 @@ img {
 
 .nav-block {
   display: flex;
-  align-self: center;
-  padding: var(--main-small-space) 0px;
 }
 
 .navbar {
   display: flex;
   margin-left: 76px;
-  width: 261px;
   gap: 40px;
 }
 
@@ -120,9 +120,11 @@ img {
 }
 
 /*-----------address block----------*/
+.address {
+  margin-left: auto;
+}
 .address-block {
   display: flex;
-  margin-left: 332px;
   gap: 40px;
 }
 
@@ -148,29 +150,30 @@ img {
 .hero-page {
   background-color: #2e2f42;
   color: var(--secodary-text-color);
-  width: 1440px;
-  height: 600px;
 
   margin-bottom: var(--main-large-spase);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 188px;
+  padding-bottom: 188px;
+  text-align: center;
 }
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
   line-height: 1.1;
   letter-spacing: 0.02em;
-  padding: 188px 292px 0;
+
   margin-bottom: 48px;
-  text-align: center;
 }
 
 .hero-btn {
   display: block;
   border-radius: 4px;
   min-width: 169px;
-  height: 56px;
   padding: 16px 32px;
   margin: 0 auto;
-  margin-bottom: 188px;
   border: none;
 
   color: var(--secodary-text-color);
@@ -187,20 +190,24 @@ img {
   background-color: var(--accent-color-hover);
 }
 /*------------------features-------------*/
-.features {
-  display: flex;
+.features-block {
   margin-bottom: var(--main-large-spase);
 }
-.features-list + .item {
-  margin-left: var(--main-small-space);
-}
 
-.features .list {
-  min-width: 264px;
+.features {
+  display: flex;
+  gap: var(--main-small-space);
+}
+.features-list {
 }
 
 .features-title {
-  padding-bottom: 8px;
+  margin-bottom: 8px;
+}
+
+.features-text {
+  min-width: 264px;
+  text-align: left;
 }
 
 /*------------------competence------------*/
@@ -214,8 +221,11 @@ img {
   margin-bottom: 72px;
   text-align: center;
 }
-.work-list + .item {
+.work-list {
   margin-left: var(--main-small-space);
+}
+.work-list:first-child {
+  margin-left: 0;
 }
 .image-set {
   display: flex;
@@ -227,10 +237,14 @@ img {
 }
 
 /*---------------------team---------------*/
+.team-section {
+  background-color: var(--button-main-color);
+
+  margin-right: auto;
+  margin-left: auto;
+}
 
 .team {
-  background-color: var(--button-main-color);
-  height: 732px;
   padding-top: var(--main-large-spase);
   padding-bottom: var(--main-large-spase);
   align-content: center;
@@ -267,14 +281,17 @@ img {
 .footer {
   color: var(--secodary-text-color);
   background-color: #2e2f42;
-  width: 1440px;
-  height: 310px;
+
+  margin-right: auto;
+  margin-left: auto;
+  padding: 100px 0 100px 0;
 }
+
 .footer-block {
-  padding: 100px 864px 100px 0px;
+  width: 264px;
 }
-.footer-text {
-  margin-top: 16px;
+.footer-logo {
+  margin-bottom: 16px;
 }
 
 /*-------------<page portfolio>------------*/
@@ -283,8 +300,10 @@ img {
 
 .buttons-list {
   display: flex;
-  align-self: center;
-  padding: 96px 271px 72px;
+  justify-content: center;
+
+  padding-top: 96px;
+  margin-bottom: 72px;
   gap: var(--main-small-space);
 }
 
@@ -404,6 +423,9 @@ img {
 }
 
 /*-------------portfolio----------------*/
+.portfolio {
+  margin-bottom: 120px;
+}
 
 .portfilio-block {
   padding: 0;
@@ -412,24 +434,29 @@ img {
   flex-wrap: wrap;
 }
 .portfilio-block .list {
-  margin-top: 40px;
+  margin-top: 48px;
   margin-right: var(--main-small-space);
 }
-
+.portfilio-block .list:nth-child(-n + 3) {
+  margin-top: 0;
+}
 .portfilio-block .list:nth-child(3n) {
   margin-right: 0px;
 }
+
 .portfolio-content {
   padding-top: 32px;
   padding-left: 16px;
+  padding-bottom: 32px;
   text-align: left;
   border: 1px solid var(--button-border-color);
   border-top: none;
-  margin-bottom: 120px;
+}
+.portfolio-title {
+  margin-bottom: 8px;
 }
 
 .portfolio-text {
   font-size: 16px;
   font-weight: 400;
-  margin-top: 8px;
 }
